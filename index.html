@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mockup Edu4all</title>
+  <!-- Carrega o Tailwind CSS para estilização -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Define a fonte Inter como padrão */
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+  </style>
+</head>
+
+<body class="bg-gray-200 flex items-center justify-center min-h-screen p-4">
+
+  <!--
+      Container principal que simula a tela do celular.
+      Tem a largura exata de 393px e altura de 852px.
+      'overflow-hidden' e 'flex-col' são usados para conter o conteúdo
+      e posicionar o rodapé fixo.
+    -->
+  <div class="w-full max-w-[393px] h-[852px] bg-white rounded-xl shadow-2xl border-4 border-gray-800 overflow-hidden flex flex-col relative">
+
+    <!--
+          Área de conteúdo rolável.
+          'overflow-y-auto' permite o scroll vertical.
+          'pb-24' (padding-bottom: 6rem) adiciona um espaçamento
+          no final para não ser coberto pelo rodapé.
+        -->
+    <div class="flex-grow overflow-y-auto pb-24">
+
+      <!-- Cabeçalho (como no mockup) -->
+      <div class="bg-teal-400 text-white p-4 shadow-md">
+        <h1 class="text-lg font-bold">Edu4all</h1>
+      </div>
+
+      <!-- Conteúdo principal (chat) -->
+      <div class="p-4 space-y-4">
+
+        <!-- Título -->
+        <h2 class="text-2xl font-bold text-gray-800">Lumi (IA Educativa):</h2>
+        <p class="text-gray-600">Fui criada com o intuito de auxiliar o seu aprendizado</p>
+
+        <!-- Mensagem da Lumi -->
+        <div class="flex">
+          <div class="bg-teal-100 p-3 rounded-2xl rounded-bl-none shadow max-w-[80%]">
+            <p class="font-semibold text-teal-800 text-sm">Lumi</p>
+            <p class="text-gray-800">Oi! Eu sou a Lumi, uma IA criada para te ajudar a aprender com segurança.</p>
+          </div>
+        </div>
+
+        <!-- Mensagem do Aluno -->
+        <div class="flex justify-end">
+          <div class="bg-gray-200 p-3 rounded-2xl rounded-br-none shadow max-w-[80%]">
+            <p class="font-semibold text-gray-800 text-sm text-right">Aluno</p>
+            <p class="text-gray-800">Gere uma imagem de uma pessoa se alimentando para meu trabalho de ciências sobre nutrição.</p>
+          </div>
+        </div>
+
+        <!-- Mensagem da Lumi -->
+        <div class="flex">
+          <div class="bg-teal-100 p-3 rounded-2xl rounded-bl-none shadow max-w-[80%]">
+            <p class="font-semibold text-teal-800 text-sm">Lumi</p>
+            <p class="text-gray-800">Claro! Aqui está a imagem de uma pessoa se alimentando, como você pediu.</p>
+          </div>
+        </div>
+
+        <!-- Placeholder da Imagem Gerada -->
+        <div class="flex items-center justify-center h-56 bg-gray-100 rounded-lg border-2 border-dashed border-gray-300">
+          <svg class="w-16 h-16 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l-1.586-1.586a2 2 0 00-2.828 0L6 14m6-6l.01.01"></path>
+          </svg>
+        </div>
+
+        <!--
+                  Este é o conteúdo do segundo mockup,
+                  colocado abaixo para permitir o scroll.
+                -->
+
+        <!-- Mensagem da Lumi (Aviso) -->
+        <div class="flex">
+          <div class="bg-blue-100 p-4 rounded-2xl border border-blue-300 shadow max-w-[90%]">
+            <p class="font-bold text-blue-800">Aviso importante:</p>
+            <p class="text-blue-700 mt-1">Essa imagem foi criada por Inteligência Artificial — ou seja, não é uma foto real. Às vezes, a IA pode errar detalhes ou mostrar algo que parece verdadeiro, mas não é. Se algo te deixar confuso, peça ajuda a um adulto ou professor.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!--
+          Rodapé de Navegação Fixo.
+          'absolute' com 'bottom-0' fixa ele na base do container pai.
+        -->
+    <div class="absolute bottom-0 left-0 right-0 bg-white border-t border-gray-200 grid grid-cols-3 gap-1 p-2 shadow-inner">
+      <!-- Item de Navegação: Home (Ativo) -->
+      <a href="#" class="flex flex-col items-center justify-center p-2 rounded-lg text-teal-600">
+        <!-- Ícone Home SVG -->
+        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+          <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"></path>
+        </svg>
+        <span class="text-xs font-medium">Home</span>
+      </a>
+
+      <!-- Item de Navegação: Procurar (Inativo) -->
+      <a href="#" class="flex flex-col items-center justify-center p-2 rounded-lg text-gray-500 hover:bg-gray-100">
+        <!-- Ícone Procurar (Lupa) SVG -->
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+        </svg>
+        <span class="text-xs font-medium">Procurar</span>
+      </a>
+
+      <!-- Item de Navegação: Todos os Jogos (Inativo) -->
+      <a href="#" class="flex flex-col items-center justify-center p-2 rounded-lg text-gray-500 hover:bg-gray-100">
+        <!-- Ícone Menu (Jogos) SVG -->
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+        <span class="text-xs font-medium">Todos os Jogos</span>
+      </a>
+    </div>
+
+  </div>
+
+</body>
+
+</html>
